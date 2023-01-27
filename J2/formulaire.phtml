@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="form.css"/>
+        
+    <title>Formulaire</title>
+    </head>
+    
+<body>
+    <section id="big">
+        <section id="left">
+        <form action="cv.phtml" method="post">
+            <?php require 'infos.phtml'?>
+        </section>
+        <?php require 'skills.phtml'?>
+        
+        <input type="submit" value="ENVOYER" name="envoi" id="button">
+        </form>
+    </section>
+</body>
+
+</html>
