@@ -1,0 +1,28 @@
+html {
+    font-family: Montserrat, sans-serif;
+}
+
+#name {
+    text-align:center;
+    background-color:#24527c;
+    color:white;
+    padding:5px;
+}
+
+#big {
+    background-color:#fefefe;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+#right {
+    border-left:1px solid #bababa;
+    padding-left:50px;
+    padding-right:50px;
+}
+#left {
+    padding-left:50px;
+    padding-right:50px;
+}
+
