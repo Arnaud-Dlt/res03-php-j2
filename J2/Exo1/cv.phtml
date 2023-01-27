@@ -1,3 +1,6 @@
+<?php 
+    require 'index.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +16,9 @@
         
     <div id="name">
         <h1>
-            
+            <?php 
+                echo $tab['nom'], $tab["prenom"];
+            ?>
         </h1>
             <p>Intitulé du poste</p>
     </div>
@@ -24,20 +29,20 @@
                 <h3>Contact</h3>
                 
                     <p>Email</p>
-                        
+                        <?=$tab["email"]?>
                     <p>Téléphone</p>
-                        
+                        <?=$tab["tel"]?>
                     <p>LinkedIn</p>
-                        
+                        <?=$tab["linkedin"]?>
                 
                 <h3>Biographie</h3>
-                    
+                    <?=$tab["bio"]?>
                 <h3>Loisirs</h3>
                      <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li><?=$tab2["loisir1"]?></li>
+                        <li><?=$tab2["loisir2"]?></li>
+                        <li><?=$tab2["loisir3"]?></li>
+                        <li><?=$tab2["loisir4"]?></li>
                     </ul>
             
         </section>
@@ -45,22 +50,38 @@
             <h1>COMPETENCES</h1>
                 <h3>Langages de Programmation</h3>
                     <ul>
-                        <li></li>
+                        <?php foreach($tab["lang"] as $lang) { ?>
+
+                            <li><?= $lang; ?></li>
+
+                        <?php }; ?>
                     </ul>
                     
                 <h3>Frameworks & Librairies</h3>
                     <ul>
-                        <li></li>
+                        <?php foreach($tab["frameworks"] as $framework) { ?>
+
+                            <li><?= $framework; ?></li>
+
+                        <?php }; ?>
                     </ul>
                     
                 <h3>Logiciels</h3>
                      <ul>
-                        <li></li>
+                        <?php foreach($tab["software"] as $software) { ?>
+
+                            <li><?= $software; ?></li>
+
+                        <?php }; ?>
                     </ul>
                     
                 <h3>Langues</h3>
                      <ul>
-                        <li></li>
+                        <?php foreach($tab["language"] as $language) { ?>
+
+                            <li><?= $language ?></li>
+
+                        <?php }; ?>
                     </ul>
             
         </section>
